@@ -1,55 +1,37 @@
-# :book: 공공도서관 자료구입비 예측 및 분석을 위한 새로운 머신러닝 프로그램 :book:
+# A Novel Machine Learning Program for Prediction and Analysis of Public Library Material Purchase Cost
 
-<br/>
+<p align="center">
+  <b>Jin-Woong Kim<sup>1</sup> · Seoung-Ho Choi<sup>2*</sup></b><br>
+  <sup>1</sup>Department of Convergence IT Engineering, Hansung University, Seoul, Republic of Korea<br>
+  <sup>2</sup>College of Liberal Arts, Faculty of Basic Liberal Arts, Hansung University, Seoul, Republic of Korea
+</p>
 
-## :pushpin: 개요
-   - 프로그램 소개
-   - 개발 동기
-   - 기술 스택
-   - 프로그램 구성도
-   - 후기
+****
 
----
-<br/>
+<img width="1200" alt="Architecture" src="https://github.com/user-attachments/assets/61558051-d0a6-4095-b7d8-377a9d29bea2" />
+<p align="center"><em>Figure 1. Overview of the proposed machine-learning program for predicting public library material purchase cost using statistical data and SHAP analysis.</em></p>
 
-## ✔️ 프로젝트 소개
-국가도서관통계시스템에서 제공하는 공공도서관 통계 데이터를 이용하여 공공도서관의 이용요인이 다음연도 자료구입비에 미치는 영향을 분석하고, 다음연도 자료구입비를 예측하는 프로젝트입니다.
+## Abstract
 
----
+The material purchase cost in public libraries plays a vital role in ensuring equitable access to information and maintaining the quality of library services. However, budget forecasting is often complicated by fluctuations in demand, price, and policy constraints. To address this challenge, we propose a novel machine-learning program that predicts the next year’s material purchase cost using statistical data from the National Library Statistics System. The dataset includes 36 usage-related features from 12,672 library records collected between 2007 and 2021. We employed five tree-based machine-learning models and two deep-learning models to estimate next-year material purchase costs. Furthermore, we conducted SHAP analysis to interpret how each factor contributes to cost predictions and applied PCA to handle multicollinearity. Experimental results show that XGBoost achieved the best predictive performance (R² = 0.699), demonstrating the model’s potential for improving public library budget allocation.
 
-<br/>
+## Motivation
 
-## ✔️ 개발 동기
-공공도서관의 자료구입비는 도서관의 정보 자원을 유지하는 데 필수적입니다. 그러나 자료구입비 예산이 과도하게 할당되면 실제 필요에 비해 과잉 구매로 이어져 자원이 낭비될 수 있고, 반대로 예산이 부족하면 도서관은 충분한 자료를 확보하지 못해 이요ㅐㅇ자들이 정보에 접근하는 데 한계가 생길 수 있습니다. 그럼에도 불구하고 수요 변동성, 가격 변동, 정책 및 자원 배분의 제약, 기술 변화, 예산 예측의 불확실성 등과 같은 여러 문제들로 인해 적정 예산을 설정하는 것이 어렵습니다. 이러한 문제를 해결하기 위해 도서관의 당해연도 이용요인을 바탕으로 다음연도 자료구입비를 예측하고, 각 이용요인들을 분석하여 새로운 인사이트를 도출하여 도서관 예산 책정에 도움을 주고자 이 프로젝트를 진행하게 되었습니다.
+- Accurate budget prediction is essential for sustainable library management and fair allocation of resources.  
+- Existing regression or correlation-based approaches are limited in scalability and interpretability.  
+- Applying modern machine-learning models can improve prediction accuracy and reveal which operational factors drive cost changes.  
+- Interpretability through SHAP analysis allows policymakers to understand the quantitative impact of each variable.
 
+## Contribution
 
----
+- Built a **machine-learning framework** to forecast public library material purchase costs using national statistics data.  
+- Collected and refined **36 annual usage indicators (2007–2021)** including number of staff, users, loans, and budgets.  
+- Compared multiple models (Random Forest, Extra Trees, CatBoost, LightGBM, XGBoost, LSTM, Transformer).  
+- Applied **PCA** to resolve multicollinearity and ensure model robustness.  
+- Utilized **SHAP** to interpret the contribution of key predictors such as *current-year cost, user count, and collection size*.  
+- Achieved the best performance using **XGBoost**, validating its potential for data-driven budget planning.
 
-<br/>
+## Contact
 
-## :shopping_cart: 기술 스택
-- 프로그래밍 언어
-   - Python
-
-- 프레임 워크 및 주요 라이브러리
-   - Tensorflow
-   - Openpose
-     
-- 사용한 인공지능 모델
-   - Random Forest
-   - Extra Trees
-   - Cat Boost
-   - XG Boost
-   - Light GBM
-   - LSTM
-   - Transformer
-
----
-
-<br/>
-
-## ✔️ Flow Chart
-- 프로그램의 전체적인 구성도
-<br/>
-
-![프로그램 구성도](https://github.com/user-attachments/assets/40c518f4-197c-4d95-9bb4-21fa074e8e91)
+📧 jwkim@hansung.ac.kr  
+📧 shchoi@hansung.ac.kr
