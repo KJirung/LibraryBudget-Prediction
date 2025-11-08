@@ -36,8 +36,3 @@ The material purchase cost in public libraries plays a vital role in ensuring eq
 - Applied **PCA** to resolve multicollinearity and ensure model robustness.  
 - Utilized **SHAP** to interpret the contribution of key predictors such as *current-year cost, user count, and collection size*.  
 - Achieved the best performance using **XGBoost**, validating its potential for data-driven budget planning.
-
-## Contact
-
-📧 jwkim@hansung.ac.kr  
-📧 shchoi@hansung.ac.kr
